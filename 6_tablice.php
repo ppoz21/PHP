@@ -171,5 +171,115 @@ TABLICA;
   wyswietl($tab2);
   echo "<hr>";
 
+  //sortowanie tablicy asocjacyjnej
 
+  $tabasoc = [
+    'imie' => 'Jan',
+    'pseudonim' => 'Kulson',
+    'wiek' => 24,
+    'nazwisko' => 'Kowalski',
+  ];
+
+  wyswietl($tabasoc);
+  echo "<hr>";
+
+  //sortowanie wg zawartości
+  asort($tabasoc);
+
+  wyswietl($tabasoc);
+  echo "<hr>";
+
+  arsort($tabasoc);
+  wyswietl($tabasoc);
+  echo "<hr>";
+
+  //sortowanie wg klucza
+
+  ksort($tabasoc);
+  wyswietl($tabasoc);
+  echo "<hr>";
+
+  krsort($tabasoc);
+  wyswietl($tabasoc);
+  echo "<hr>";
+
+  //wyświetlanie danych z tablicy
+
+  var_dump($tabasoc);
+
+  echo "<hr>";
+  echo("<pre>");
+  var_dump($tabasoc);
+  echo "</pre>";
+  echo "<hr>";
+
+  print_r($tabasoc);
+  echo "<hr>";
+
+  echo "<pre>";
+  print_r($tabasoc);
+  echo "</pre>";
+
+  echo "<hr>";
+
+  //****************************************************************************
+
+  //range
+
+  $liczby = range(0,10);
+
+  wyswietl($liczby);
+  echo "<hr>";
+  echo "<pre>";
+  print_r($liczby);
+  echo "</pre>";
+  echo "<hr>";
+
+  $liczby1 = range(2,15,2);
+
+  wyswietl($liczby1);
+  echo "<hr>";
+  echo "<pre>";
+  print_r($liczby1);
+  echo "</pre>";
+  echo "<hr>";
+
+  $tekst = range("a","k");
+
+  wyswietl($tekst);
+  echo "<hr>";
+  echo "<pre>";
+  print_r($tekst);
+  echo "</pre>";
+  echo "<hr>";
+
+  $tekst1 = range("c","m",3);
+
+  wyswietl($tekst1);
+  echo "<hr>";
+  echo "<pre>";
+  print_r($tekst1);
+  echo "</pre>";
+  echo "<hr>";
+
+  //****************************************************************************
+
+  //shuffle
+
+  $liczby2 = range(1,20);
+
+  wyswietl($liczby2);
+  echo "<hr>";
+  shuffle($liczby2);
+  wyswietl($liczby2);
+  echo "<hr>";
+  //losowanie liczb
+
+  $x = rand(1,10);
+  echo "$x";
+  echo "<hr>";
+
+  $arrSrc = range(0, 100);
+  shuffle($arrSrc);
+  wyswietl(array_slice($arrSrc, 95));
 ?>
