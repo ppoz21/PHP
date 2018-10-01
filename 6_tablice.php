@@ -87,7 +87,25 @@ TABLICA;
   utwóz tablicę 3-wymiarową i napisz dla niej funkcję
   wyświetlającą zawartość (wykorzystaj funkcję foreach)
   */
+  $tablica_3_2ymiarowa = array(
+    'imie' => array(
+      '1-imie' => array('Jan', 'Hubert'),
+      '2-imie' => array('Piotr', 'Szymon')
+    ),
+    'nazwisko' => array(
+      'nazwisko' => array ('Adamowicz', 'Jankowski'),
+      'nazwisko rodowe' => array ('-', 'Prowansalski')
+    )
+  );
 
+
+  foreach ($tablica_3_2ymiarowa as $klucz => $tablicapodstawowa) {
+    foreach ($tablicapodstawowa as $klucz2 => $tablica2wymiar) {
+      foreach ($tablica2wymiar as $klucz3 => $wartosc) {
+        echo "$wartosc";
+      }
+    }
+  }
   //***************************************************
   echo "<hr>";
 
