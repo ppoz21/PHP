@@ -1,0 +1,5 @@
+zapytanie 1:
+
+SELECT `imie`,`telefon`,`szczepienie`,`opis` FROM `zwierzeta`
+
+zapytanie 2:
